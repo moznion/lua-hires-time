@@ -6,5 +6,5 @@ if err ~= nil then
     os.exit(1)
 end
 
-print(epoch_micros)
+print(string.format("%.0f", epoch_micros))
 
