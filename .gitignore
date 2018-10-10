@@ -5,4 +5,5 @@
 *.o
 *.so
 *.src.rock
+*.dll
 

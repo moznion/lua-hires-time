@@ -42,11 +42,6 @@ This method returns the values that accords the following order:
 
 When `err` is nil, `epoch_micros` has an actual number value. On the other hand, when `err` is not nil, `epoch_micros` is nil.
 
-Disclaimer
---
-
-This library doesn't work on Windows (I have a will to support it).
-
 See also
 --
 

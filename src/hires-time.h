@@ -9,7 +9,16 @@ extern "C" {
 #include <lauxlib.h>
 #include <lualib.h>
 
+#ifdef WIN32
+
+#include <windows.h>
+#include <stdint.h>
+
+#else
+
 #include <sys/time.h>
+
+#endif
 
 #ifdef __cplusplus
 }

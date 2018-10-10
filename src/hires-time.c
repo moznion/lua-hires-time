@@ -1,6 +1,18 @@
 #include "hires-time.h"
 
 static int get_epoch_micros(lua_State* L) {
+#ifdef WIN32
+#define EPOCH_PADDING 11644473600000000ULL
+    FILETIME ft;
+    GetSystemTimeAsFileTime(&ft);
+
+    uint64_t t = (uint64_t)ft.dwHighDateTime << 32 | ft.dwLowDateTime;
+    t /= 10; // convert to usec
+    t -= EPOCH_PADDING; // convert to epoch
+
+    lua_pushnumber(L, t);
+    lua_pushnil(L);
+#else
     struct timeval t;
     if (gettimeofday(&t, NULL) < 0) {
         lua_pushnil(L);
@@ -9,6 +21,7 @@ static int get_epoch_micros(lua_State* L) {
         lua_pushnumber(L, t.tv_sec * 1000000 + t.tv_usec);
         lua_pushnil(L);
     }
+#endif
 
     return 2;
 }
