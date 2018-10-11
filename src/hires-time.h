@@ -24,7 +24,7 @@ extern "C" {
 }
 #endif
 
-#define HIRESTIME_VERSION "0.0.1-0"
+#define HIRESTIME_VERSION "0.1.0-0"
 #define HIRESTIME_LIBNAME "hires-time"
 #define HIRESTIME_COPYRIGHT "Copyright © 2018 moznion, http://moznion.net/ <moznion@gmail.com>"
 #define HIRESTIME_DESCRIPTION "A library to measure the system time with high resolution for lua"

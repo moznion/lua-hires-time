@@ -1,9 +1,9 @@
 package = "hires-time"
-version = "0.0.1-0"
+version = "0.1.0-0"
 
 source = {
     url = "git://github.com/moznion/lua-hires-time.git",
-    branch = "v0.0.1-0",
+    branch = "v0.1.0-0",
 }
 
 description = {
